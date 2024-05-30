@@ -1,13 +1,15 @@
-/* .form {
+.form {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-} */
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0 0 1.2rem;
+}
 
-.png {
-  margin-left: 70rem;
-  width: 300px;
+@media only screen and (max-width: 900px) {
+  .form {
+    flex-direction: column;
+  }
 }
 
 .div {
@@ -17,11 +19,26 @@
   font-size: 1rem;
   padding: 25px 35px;
   margin-top: 2rem;
-  /* width: 51.5%; */
   border-radius: 10px;
   margin: 20px;
 }
 
 .div ul li {
   list-style-type: style type;
+}
+
+.div ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.div ul li div h3 {
+  width: 10px;
+  height: auto;
+}
+.div ul li div h4{
+  width: 10px;
+  height: auto;
 }

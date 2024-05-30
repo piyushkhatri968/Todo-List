@@ -30,7 +30,7 @@ const Page = () => {
   if (maintask.length > 0) {
     rendertask = maintask.map((t, i) => {
       return (
-        <div key={i} className="flex justify-between items-center">
+        <div key={i}>
           <h3 className="font-2xl font-semibold">{t.task}</h3>
           <h4 className="font-lg font-medium">{t.desc}</h4>
           <button
@@ -55,7 +55,7 @@ const Page = () => {
         <form className={styles.form} onSubmit={sumbithandler}>
           {/* input for task */}
           <input
-            className="text-xl border-zinc-800 border-4  p-2 rounded-md px-4 py-2 my-5 mx-5"
+            className="text-xl border-zinc-800 border-4  p-2 rounded-md px-4 py-2"
             placeholder="Enter task here"
             value={task}
             onChange={(e) => {
@@ -66,7 +66,7 @@ const Page = () => {
           {/* input for description */}
           <input
             type="text"
-            className="text-xl border-zinc-800 border-4  p-2 rounded-md px-4 py-2 my-5 mr-5"
+            className="text-xl border-zinc-800 border-4  rounded-md px-4 py-2"
             placeholder="Enter description here"
             value={desc}
             onChange={(e) => {
@@ -76,13 +76,13 @@ const Page = () => {
               // console.log(e.target.value);
             }}
           ></input>
-          <button className="text-white bg-black px-5 py-3 text-xl rounded-md font-semibold">
+          <button className={`${styles.button} text-white bg-black  px-5 py-3 text-xl rounded-md font-semibold`}>
             Add Task
           </button>
         </form>
       </div>
       <div className={styles.div}>
-        <h2>TASK</h2>
+        <h1 className="text-center">TASK</h1>
         <ul>
           <li>{rendertask}</li>
         </ul>
