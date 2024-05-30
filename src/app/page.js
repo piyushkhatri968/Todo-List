@@ -82,7 +82,7 @@ const Page = () => {
         </form>
       </div>
       <div className={styles.div}>
-        <h1 className="text-center">TASK</h1>
+        <h1 className="text-center text-[1.5rem]">TASK</h1>
         <ul>
           <li>{rendertask}</li>
         </ul>
